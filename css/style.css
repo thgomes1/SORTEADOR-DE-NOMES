@@ -1,0 +1,215 @@
+/*----ELEMENTS CFG----*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(28, 36, 43);
+}
+button {
+    transition: 200ms;
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgb(175, 175, 175);
+}
+
+/*----CENTRALIZE CLASSES----*/
+.cent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centColum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.elementCFG {
+    width: 60%;
+    padding: 10px;
+    margin: 5px 5px;
+    border-radius: 10px;
+    border: 0;
+}
+
+/*-------------------MAIN CONTAINER-------------------*/
+#mainContainer {
+    width: 800px;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(31, 64, 94);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 5px black;
+}
+
+/*----HEADER----*/
+#headerContainer {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid black;
+    background-color: rgb(0, 132, 255);
+}
+#headerContainer h1 {
+    font-size: 3rem;
+}
+
+/*--------------CONTENT------------*/
+
+/*----INSERT----*/
+#insertContainer {
+    width: 800px;
+    font-size: 3rem;
+    color: white;
+    padding: 15px;
+}
+#insertContainer span {
+    font-size: 2.4rem;
+}
+#insertContainer p {
+    padding: 5px;
+    font-size: 2.5rem;
+    letter-spacing: 0.8px;
+    word-spacing: 1px;
+    text-transform: uppercase;
+}
+#insertContainer #errorName {
+    font-size: 1.5rem;
+    color: red;
+    opacity: 0%;
+    visibility: hidden;
+    transition: 200ms;
+}
+#insertContainer #errorP {
+    font-size: 1.5rem;
+    color: red;
+    opacity: 0%;
+    top: 42.5%;
+    position: absolute;
+    visibility: hidden;
+    transition: 50ms;
+}
+#buttons {
+    display: flex;
+    width: 61%;
+}
+#buttons #input {
+    width: 70%;
+}
+#buttons #buttonAddName {
+    width: 30%;
+}
+
+/*----NAMES----*/
+#namesContainer {
+    background-color: rgb(63, 97, 129);
+    width: 57%;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+#namesContainer h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid black;
+    background-color: rgb(0, 132, 255);
+}
+#namesContainer #names {
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+    overflow: auto;
+}
+#namesContainer #buttonSorteio {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    padding: 5px 0px;
+}
+
+.nameCFG {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgb(0, 126, 245);
+}
+.nameCFG p {
+    width: 80%;
+}
+.nameCFG button {
+    width: 20%;
+    border-radius: 10px;
+    border: 0;
+}
+/*--------------END-CONTENT------------*/
+
+/*----FOOTER----*/
+#footerContainer {
+    margin-bottom: 30px;
+}
+#footerContainer a {
+    color: white;
+    border: 2px solid rgb(0, 132, 255);
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 500ms;
+    box-shadow: 2px 2px 5px black;
+}
+#footerContainer span {
+    font-size: 1.5rem;
+}
+#footerContainer a:hover {
+    background-color: rgba(32, 127, 252, 0.397);
+}
+/*-------------------END-MAIN CONTAINER-------------------*/
+
+/*-------------------RESULT CONTAINER-------------------*/
+#resultContainer {
+    position: absolute;
+    visibility: hidden;
+    width: 800px;
+}
+#divResult {
+    position: absolute;
+    opacity: 0%;
+    color: white;
+    visibility: hidden;
+    top: 38%;
+    width: 50%;
+    height: 110px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px black;
+    background-color: rgb(0, 132, 255);
+    transition: 600ms;
+}
+#divResult h1 {
+    font-size: 2.25rem;
+}
+#divResult span {
+    font-size: 2.25rem;
+}
+#divResult button {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 4px 25px;
+    border-radius: 10px;
+    border: 0;
+}

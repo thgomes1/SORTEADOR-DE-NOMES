@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sorteio</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+        </style>
+    </head>
+
+    <body>
+        <main id="mainContainer" class="centColum">
+            <!--Header-->
+            <header id="headerContainer">
+                <h1>SORTEADOR DE NOMES</h1>
+            </header>
+
+            <!--Content-->
+            <section id="contentContainer" class="centColum">
+                <!--Insert-->
+                <article id="insertContainer" class="centColum">
+                    <p>Insira os PARTICIPANTES</p>
+
+                    <div id="buttons">
+                        <input type="text" placeholder="Nome" id="input" class="elementCFG" />
+                        <button id="buttonAddName" class="elementCFG" onclick="addName()">ADD</button>
+                    </div>
+
+                    <p id="errorName">*PREENCHA O CAMPO COM O NOME*</p>
+                    <p id="errorP">*PREENCHA O CAMPO COM AO MENOS DOIS NOMES*</p>
+                </article>
+
+                <!--Names-->
+                <article id="namesContainer" class="centColum">
+                    <h1>PARTICIPANTES</h1>
+                    <div id="names"></div>
+                    <button id="buttonSorteio" class="elementCFG" onclick="sorteio()">SORTEAR</button>
+                </article>
+            </section>
+
+            <!--Footer-->
+            <footer id="footerContainer">
+                <a href="https://github.com/thgomes1" target="_blank">
+                    by
+                    <span>Thiago Gomes</span>
+                </a>
+            </footer>
+        </main>
+
+        <!--Result-->
+        <div id="resultContainer" class="cent">
+            <div id="divResult" class="centColum">
+                <h1>
+                    O VENCEDOR FOI:
+                    <span id="result"></span>
+                </h1>
+                <button id="buttonBack" onclick="buttonBack()">VOLTAR</button>
+            </div>
+        </div>
+
+        <script>
+            input.addEventListener("keyup", enter);
+
+            function enter() {
+                if (event.keyCode === 13) {
+                    document.getElementById("buttonAddName").click();
+                }
+            }
+        </script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
