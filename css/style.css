@@ -266,7 +266,7 @@ button:hover {
     }
 
     #insertContainer {
-        width: 89%;
+        width: 100%;
         height: 25%;
     }
     #insertContainer #buttons {
@@ -274,7 +274,7 @@ button:hover {
         font-size: 2.25rem;
     }
     #namesContainer {
-        width: 75%;
+        width: 85%;
         height: 65%;
         margin: 0;
     }
@@ -306,6 +306,21 @@ button:hover {
         font-size: 55%;
     }
 }
+@media (max-width: 460px) {
+    #insertContainer #errorName {
+        font-size: 1rem;
+    }
+    #divResult {
+        padding: 10px;
+    }
+    #divResult h1 {
+        font-size: 1.9rem;
+    }
+    #divResult span {
+        font-size: 1.9rem;
+    }
+}
+
 @media (max-width: 340px) {
     * {
         font-size: 52.5%;
