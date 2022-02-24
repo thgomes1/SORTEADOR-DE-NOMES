@@ -5,7 +5,6 @@ let divResult = document.getElementById("divResult");
 let mainContainer = document.getElementById("mainContainer");
 let resultContainer = document.getElementById("resultContainer");
 let errorName = document.getElementById("errorName");
-let errorP = document.getElementById("errorP");
 let buttonAddName = document.getElementById("buttonAddName");
 
 onload = function () {
@@ -24,6 +23,7 @@ function addName() {
     let valor = input.value;
 
     if (valor === "" || valor === " ") {
+        errorName.innerHTML = "*PREENCHA O CAMPO COM O NOME*";
         errorName.style.opacity = "100%";
         errorName.style.visibility = "visible";
     } else {
@@ -36,8 +36,6 @@ function addName() {
 
         errorName.style.visibility = "hidden";
         errorName.style.opacity = "0%";
-        errorP.style.opacity = "0%";
-        errorP.style.visibility = "hidden";
 
         valor = JSON.stringify(names.innerHTML);
         localStorage.setItem("valor", valor);
@@ -60,12 +58,14 @@ let nameP = document.getElementsByClassName("nameP");
 function sorteio() {
     let valorName = names.innerHTML;
 
-    if (valorName === "" || valorName === " ") {
+    if (valorName == "" || valorName == " ") {
+        errorName.innerHTML = "*PREENCHA O CAMPO COM O NOME*";
         errorName.style.opacity = "100%";
         errorName.style.visibility = "visible";
     } else if (names.children.length < 2) {
-        errorP.style.opacity = "100%";
-        errorP.style.visibility = "visible";
+        errorName.innerHTML = "*PREENCHA O CAMPO COM AO MENOS DOIS NOMES*";
+        errorName.style.opacity = "100%";
+        errorName.style.visibility = "visible";
     } else {
         let numP = nameP.length;
         let numS = Math.floor(Math.random() * numP);
@@ -80,8 +80,6 @@ function sorteio() {
 
         errorName.style.visibility = "hidden";
         errorName.style.opacity = "0%";
-        errorP.style.opacity = "0%";
-        errorP.style.visibility = "hidden";
     }
 }
 

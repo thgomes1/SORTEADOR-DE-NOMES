@@ -6,6 +6,15 @@
     box-sizing: border-box;
     font-family: "Kanit", sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(0, 110, 255);
+}
+
 body {
     display: flex;
     align-items: center;
@@ -44,7 +53,9 @@ button:hover {
 
 /*-------------------MAIN CONTAINER-------------------*/
 #mainContainer {
+    justify-content: flex-start;
     width: 800px;
+    height: 650px;
     font-size: 3rem;
     color: white;
     background-color: rgb(31, 64, 94);
@@ -67,8 +78,14 @@ button:hover {
 
 /*--------------CONTENT------------*/
 
+#contentContainer {
+    justify-content: flex-start;
+    height: 100%;
+}
+
 /*----INSERT----*/
 #insertContainer {
+    height: 25%;
     width: 800px;
     font-size: 3rem;
     color: white;
@@ -113,9 +130,11 @@ button:hover {
 
 /*----NAMES----*/
 #namesContainer {
+    justify-content: flex-start;
+    position: relative;
     background-color: rgb(63, 97, 129);
-    width: 57%;
-    margin-bottom: 25px;
+    width: 60%;
+    height: 70%;
     border-radius: 10px;
 }
 #namesContainer h1 {
@@ -128,15 +147,24 @@ button:hover {
     background-color: rgb(0, 132, 255);
 }
 #namesContainer #names {
+    position: absolute;
+    bottom: 19.5%;
     text-align: center;
     font-size: 3rem;
-    width: 100%;
-    padding: 20px 20px 0px 20px;
-    overflow: auto;
+    width: 85%;
+    height: 57%;
+    padding: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid rgb(26, 52, 90);
+    border-radius: 10px;
+    background-color: rgb(45, 91, 129);
 }
 #namesContainer #buttonSorteio {
+    position: absolute;
+    bottom: 0%;
     font-size: 1.5rem;
-    margin-bottom: 25px;
+    margin: 15px;
     padding: 5px 0px;
 }
 
@@ -152,7 +180,8 @@ button:hover {
     width: 80%;
 }
 .nameCFG button {
-    width: 20%;
+    padding: 0px 10px;
+    width: fit-content;
     border-radius: 10px;
     border: 0;
 }
@@ -160,13 +189,14 @@ button:hover {
 
 /*----FOOTER----*/
 #footerContainer {
-    margin-bottom: 30px;
+    margin: 20px;
+    height: 5%;
 }
 #footerContainer a {
     color: white;
     border: 2px solid rgb(0, 132, 255);
     border-radius: 10px;
-    padding: 5px;
+    padding: 2px;
     text-decoration: none;
     font-size: 1rem;
     transition: 500ms;
@@ -212,4 +242,94 @@ button:hover {
     padding: 4px 25px;
     border-radius: 10px;
     border: 0;
+}
+
+/*----------------MEDIA QUIRES--------------*/
+
+@media (max-width: 860px) {
+    body {
+        width: 100%;
+        max-height: 2000000px;
+        align-items: flex-start;
+        background-color: rgb(31, 64, 94);
+    }
+
+    #mainContainer {
+        border-radius: 0;
+        position: relative;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100vh;
+        box-shadow: 0px 0px 0px;
+    }
+
+    #headerContainer {
+        z-index: 5;
+    }
+
+    #contentContainer {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #insertContainer {
+        width: 100%;
+        height: 25%;
+    }
+    #insertContainer #buttons {
+        width: 90%;
+        font-size: 2.25rem;
+    }
+    #insertContainer #errorP {
+        font-size: 1.5rem;
+        color: red;
+        position: static;
+        opacity: 0%;
+        visibility: hidden;
+        transition: 50ms;
+    }
+    #namesContainer {
+        position: relative;
+        justify-content: flex-start;
+        width: 85%;
+        height: 65%;
+        margin: 0;
+    }
+    #namesContainer #names {
+        width: 90%;
+        height: 60%;
+        bottom: 17.5%;
+        padding: 7px;
+        font-size: 4rem;
+    }
+    #namesContainer #buttonSorteio {
+        position: absolute;
+        margin: 0;
+        bottom: 4%;
+    }
+    #footerContainer {
+        height: 2%;
+        margin: 30px;
+    }
+
+    #resultContainer {
+        width: 100%;
+        height: 100vh;
+    }
+}
+@media (max-width: 540px) {
+    * {
+        font-size: 55%;
+    }
+}
+@media (max-width: 340px) {
+    * {
+        font-size: 52.5%;
+    }
+}
+@media (max-width: 310px) {
+    * {
+        font-size: 50%;
+    }
 }
