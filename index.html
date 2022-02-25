@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sorteio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
@@ -37,6 +38,11 @@
                     <h1>PARTICIPANTES</h1>
                     <div id="names"></div>
                     <button id="buttonSorteio" class="elementCFG" onclick="sorteio()">SORTEAR</button>
+                </article>
+
+                <article id="optionContainer" class="cent">
+                    <label for="checkbox">Apagar dados ao sortear</label>
+                    <input id="checkbox" type="checkbox" value="true" class="cent" />
                 </article>
 
                 <!--Footer-->

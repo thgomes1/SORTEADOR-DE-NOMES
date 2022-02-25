@@ -6,6 +6,8 @@ let mainContainer = document.getElementById("mainContainer");
 let resultContainer = document.getElementById("resultContainer");
 let errorName = document.getElementById("errorName");
 let buttonAddName = document.getElementById("buttonAddName");
+let checkBox = document.getElementById("checkbox");
+let buttonSorteio = document.getElementById("buttonSorteio");
 
 onload = function () {
     let dadoName = localStorage.getItem("valor");
@@ -80,6 +82,17 @@ function sorteio() {
 
         errorName.style.visibility = "hidden";
         errorName.style.opacity = "0%";
+    }
+
+    buttonSorteio.addEventListener("click", check());
+}
+
+function check() {
+    if (checkBox.checked == true) {
+        names.innerHTML = "";
+        valor = JSON.stringify(names.innerHTML);
+        localStorage.setItem("valor", valor);
+    } else {
     }
 }
 
