@@ -42,7 +42,7 @@ Um simples sorteador de nomes totalmente aleatório e responsivo, que armazena o
 
 # :open_book: Licença
 
-Este projeto possui uma licença do tipo MIT. Cheque o arquivo [LICENSE](https://github.com/thgomes1/calculadora-de-importacao/blob/main/LICENSE) para saber mais
+Este projeto possui uma licença do tipo MIT. Cheque o arquivo [LICENSE](https://github.com/thgomes1/sorteador-de-nomes/blob/main/LICENSE) para saber mais
 
 #
 
