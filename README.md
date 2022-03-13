@@ -34,6 +34,8 @@ Um simples sorteador de nomes totalmente aleatório e responsivo, que armazena o
  </tr>
 </table>
 
+<p align="center"><a href="https://thgomes1.github.io/sorteador-de-nomes/">TESTE A PÁGINA AQUI</a></p>
+
 # :computer: Tecnologias
 
 -   <p>HTML5</p>
