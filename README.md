@@ -12,7 +12,7 @@
 </p>
 
 <p>
-Um simples sorteador de nomes totalmente aleatório e responsivo, que armazena os dados dando a opção do usuário escolher se quer manter os mesmos armazenados ou não.
+Um simples sorteador de nomes aleatório e responsivo.
 </p>
 
 <p align="center">
